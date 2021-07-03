@@ -1,0 +1,243 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(45deg, #49a09d, #5f2c82); 
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.container {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+table {
+    width: 1000px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+    padding: 5px;
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+th {
+    text-align: left;
+}
+
+thead {
+    th {
+        background-color: #55608f;
+    }
+}
+
+tbody {
+    tr {
+        &:hover {
+            background-color: rgba(255,255,255,0.3);
+        }
+    }
+    td {
+        position: relative;
+        &:hover {
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -9999px;
+                bottom: -9999px;
+                background-color: rgba(255,255,255,0.2);
+                z-index: -1;
+            }
+        }
+    }
+}
+
+.container .order-table-header {
+
+    font-family: serif;
+
+
+    font-size: 22px;
+    background: #2c2845;
+    color: #fff;
+    border-radius: 5px;
+    
+
+    
+    box-shadow: 0 0 5px #ceacec,
+        0 0 25px #ec738a,
+        0 0 50px #e4c8e2,
+        0 0 100px #5b4588;
+
+}
+
+
+.menu {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  width: 1250px;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 25px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  
+}
+
+.menu-kisi {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 25px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  
+}
+
+
+.giris{
+    
+
+    margin: 0 20px 0 37%;
+     color: whitesmoke;
+    font-size: 50px;
+
+}
+
+.tsk {
+    
+    text-align: center;
+    font-size: 43px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f5b0d6;
+    
+    
+}
+
+
+
+
+.login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #f40353;
+    font-size: 23px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 10px;
+    letter-spacing: 4px
+}
+
+.login-box a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4;
+}
+
+.login-box a span {
+    position: absolute;
+    display: block;
+}
+
+.login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+
+.login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+
+.login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+
+.login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}
